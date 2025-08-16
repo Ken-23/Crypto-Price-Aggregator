@@ -4,8 +4,8 @@ import { BinanceService } from './binance.service';
 @Controller('binance')
 export class BinanceController {
   constructor(private readonly binanceService: BinanceService) {}
-  @Get('getBTCPrice')
+  @Get('get_ticker_price')
   getTheLatestPrice() {
-    return this.binanceService.getLatestPrice();
+    return this.binanceService.getTickerPrice();
   }
 }
